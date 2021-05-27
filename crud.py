@@ -28,7 +28,7 @@ def submit():
             Quantity = request.form["Quantity"]
             with sqlite3.connect("factory.db") as con:
                 cur = con.cursor()
-                cur.execute("INSERT into products (Name, email, phone number, address, name, Quantity) values (?,?,?,?,?)",(Name,Email,Phonenumber,Address,name,Quantity))
+                cur.execute("INSERT into products (Name, email, phone number, address, name, Quantity) values (?,?,?,?,?,?)",(Name,Email,Phonenumber,Address,name,Quantity))
                 con.commit()
                 msg = "Order Placed Successfully"
         except:
